@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:locksy/crypto/cryptography_handler.dart';
+import 'dart:math';
 
 class NewServiceScreen extends StatefulWidget {
   NewServiceScreen({super.key, required this.masterKey});
@@ -37,11 +38,14 @@ class _NewServiceScreenState extends State<NewServiceScreen> {
     if (_includeNumbers) chars += numbers;
     if (_includeSpecialChar) chars += specialChars;
 
-    return List.generate(_passwordLength.toInt(), (index) {
-      final randomIndex = (chars.length * (index / _passwordLength)).floor();
-      return chars[randomIndex];
-    }).join('');
-  }
+    
+
+  final Random random = Random();
+  return List.generate(_passwordLength.toInt(), (_) {
+    final randomIndex = random.nextInt(chars.length);
+    return chars[randomIndex];
+  }).join('');
+}
 
 
   void _saveService(BuildContext context) async {
