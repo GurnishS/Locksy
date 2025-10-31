@@ -83,11 +83,11 @@ jobs:
           mkdir -p dist
           VERSION=${GITHUB_REF_NAME}
           if [ "${{ matrix.platform }}" == "android" ]; then
-            cp build/app/outputs/flutter-apk/app-release.apk dist/musee-android-${VERSION}.apk
+            cp build/app/outputs/flutter-apk/app-release.apk dist/locksy-android-${VERSION}.apk
           elif [ "${{ matrix.platform }}" == "linux" ]; then
-            zip -r dist/musee-linux-${VERSION}.zip build/linux/x64/release/bundle/
+            zip -r dist/locksy-linux-${VERSION}.zip build/linux/x64/release/bundle/
           elif [ "${{ matrix.platform }}" == "macos" ]; then
-            zip -r dist/musee-macos-${VERSION}.zip build/macos/Build/Products/Release/
+            zip -r dist/locksy-macos-${VERSION}.zip build/macos/Build/Products/Release/
           fi
         shell: bash
 
@@ -98,7 +98,7 @@ jobs:
           New-Item -ItemType Directory -Force -Path dist
           $version = "${{ github.ref_name }}"
           Compress-Archive -Path (Get-ChildItem -Path 'build/windows/x64/runner/Release' -Recurse) `
-            -DestinationPath "dist/musee-windows-$version.zip" -Force
+            -DestinationPath "dist/locksy-windows-$version.zip" -Force
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
