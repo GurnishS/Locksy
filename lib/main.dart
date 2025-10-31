@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Locksy',
       theme: customTheme,
       home: const MyHomePage(),
     );
