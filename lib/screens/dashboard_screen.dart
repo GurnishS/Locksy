@@ -18,7 +18,7 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   var _isLoading = false;
   var _valtName="Vault";
-  var _leadingWidth=100;
+  final _leadingWidth=100;
 
   List<Map<String, Object>> storedPasswords = [
   ];

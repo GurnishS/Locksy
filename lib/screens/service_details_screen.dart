@@ -28,10 +28,10 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
     String username = widget.data['username'] ?? '';
     String password = widget.data['password'] ?? '';
 
-    final _serviceController = TextEditingController(text: serviceName);
-    final _urlController = TextEditingController(text: url);
-    final _usernameController = TextEditingController(text: username);
-    final _passwordController = TextEditingController(text: password);
+    final serviceController = TextEditingController(text: serviceName);
+    final urlController = TextEditingController(text: url);
+    final usernameController = TextEditingController(text: username);
+    final passwordController = TextEditingController(text: password);
 
     return Scaffold(
       appBar: AppBar(
@@ -45,11 +45,11 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                  child: Container(
+                  child: SizedBox(
                       width: 250,
                       child: Image.asset("assets/happy_person.png"))),
               TextField(
-                controller: _serviceController,
+                controller: serviceController,
                 readOnly: true,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(
@@ -63,7 +63,7 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
               ),
 
               TextField(
-                controller: _urlController,
+                controller: urlController,
                 readOnly: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -73,7 +73,7 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
                   suffixIcon: IconButton(
                     onPressed: () {
                       Clipboard.setData(ClipboardData(
-                        text: _urlController.text,
+                        text: urlController.text,
                       ));
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
@@ -92,7 +92,7 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
                 height: 20,
               ),
               TextField(
-                controller: _usernameController,
+                controller: usernameController,
                 readOnly: true,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -102,7 +102,7 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
                   suffixIcon: IconButton(
                     onPressed: () {
                       Clipboard.setData(ClipboardData(
-                        text: _usernameController.text,
+                        text: usernameController.text,
                       ));
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
@@ -122,7 +122,7 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
               ),
 
               TextField(
-                controller: _passwordController,
+                controller: passwordController,
                 readOnly: true,
                 decoration: InputDecoration(
                   border: const OutlineInputBorder(
@@ -132,7 +132,7 @@ class _ServiceDetailsScreenState extends State<ServiceDetailsScreen> {
                   suffixIcon: IconButton(
                     onPressed: () {
                       Clipboard.setData(ClipboardData(
-                        text: _passwordController.text,
+                        text: passwordController.text,
                       ));
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(

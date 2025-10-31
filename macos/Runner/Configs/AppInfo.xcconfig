@@ -8,7 +8,7 @@
 PRODUCT_NAME = locksy
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.locksy.com.locksy
+PRODUCT_BUNDLE_IDENTIFIER = com.example.locksy
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2024 com.locksy.com. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2025 com.example. All rights reserved.

@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(30),
-              child: Container(
+              child: SizedBox(
                 // color: Theme.of(context).colorScheme.tertiary,
                 width: 200,
                 height: 200,

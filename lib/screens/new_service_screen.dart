@@ -4,7 +4,7 @@ import 'package:locksy/crypto/cryptography_handler.dart';
 import 'dart:math';
 
 class NewServiceScreen extends StatefulWidget {
-  NewServiceScreen({super.key, required this.masterKey});
+  const NewServiceScreen({super.key, required this.masterKey});
 
   final masterKey;
 

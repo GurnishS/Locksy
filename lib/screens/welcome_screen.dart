@@ -4,7 +4,7 @@ import 'package:locksy/screens/dashboard_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
 
-  WelcomeScreen({super.key});
+  const WelcomeScreen({super.key});
 
   @override
   State<WelcomeScreen> createState() => _WelcomeScreenState();

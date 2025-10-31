@@ -3,9 +3,9 @@
     "short_name": "locksy",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#hexcode",
-    "theme_color": "#hexcode",
-    "description": "A Simple Password Manager App built using Flutter",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
